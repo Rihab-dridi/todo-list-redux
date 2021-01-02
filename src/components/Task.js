@@ -1,9 +1,9 @@
 import React,{ useState } from 'react';
-import { useSelector,useDispatch } from 'react-redux'
+import {useDispatch } from 'react-redux'
 import { delet,edit,complet } from '../redux/actions/action';
 
 
-const Todo=({todo,dlt})=>{
+const Todo=({todo})=>{
        const dispatch=useDispatch()
        
        const[editt,setEditt ] = useState(todo.edit) //just to open/close the input  
@@ -19,8 +19,8 @@ const Todo=({todo,dlt})=>{
             }
        
 
-          const complt=()=>{
-                 dispatch(complet(todo.id))
+       const complt=()=>{
+          dispatch(complet(todo.id))
           }
 
     return (
@@ -28,7 +28,7 @@ const Todo=({todo,dlt})=>{
                 
              
                <div className="todos">
-                <li  className="todo"style={todo.completed ? {textDecoration:"line-through", backgroundColor:"green"}:null}>  {todo.text} </li>
+                <li  className="todo"style={todo.completed ? {textDecoration:"line-through", backgroundColor:"grey"}:null}>  {todo.text} </li>
                 <div className="btns">
                 <button className="com-btn" onClick={complt}><i class="far fa-check-square"></i></button>
                 <button className="del-btn" onClick={()=>dispatch(delet(todo.id))}><i class="fas fa-trash-alt"></i></button>
@@ -37,7 +37,7 @@ const Todo=({todo,dlt})=>{
                </div>
                <div> 
                {(editt===true)?
-                <div>
+                <div className="edit">
                 <input className="input-edit" type="text" 
                        onChange={textHandler }
                        autoFocus/>

@@ -1,140 +1,142 @@
 .App {
   text-align: center;
 }
-
-li{
+*{
+  margin:0;
+  padding:0;
+}
+ul{
   list-style: none;
 }
-.myForm{
-  background-color: blue;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin-bottom: 0%;
+
+.date{
+  width: 70%;
+ height:300px;
+background-image: url("https://media1.popsugar-assets.com/files/thumbor/_XIv2PMlWMie6FmqWMBh7pr-XHk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/09/19/992/n/36735815/c5a39fb959c04d658f6b73.48321050_edit_img_cover_file_37438685_1477814400/i/39-Inspirational-Quotes-Change-Your-Life.jpg");
+margin-left: 15%;
 }
+
+
+.myForm{
+  display: flex;
+  margin-left: 15%;
+  margin-top: 10px;
+  width: 70%; 
+}
+.body{
+  background-color: black;
+  
+}
+
 .form-input{
-  width:40%;
-  height:50px;
+  width: 80%;
+  background-color: tan;
+  height:35px;
+  padding-left: 7px;
+  font-size: 15px;
+}
+.Add-form{
+  display: flex;
+  margin-right:5px;
+}
+.Add-btn .fas{
+  font-size: 30px;
+  color:tan
+}
+.Add-btn .fas:hover{
+  font-size: 35px;
 }
 .Add-btn{
-  height:56px;
-  width: 100px;
+  height:35px;
+  border:solid grey 0.1px;
+  margin-top: 2px;
+  margin-left:5px ;
+  width:50px;
+
+}
+.form-input{
+  width:740px;
+ 
+}
+
+
+.select{
+  color:tan;
+  height:93%;
+  width:150px;
+}
+
+.select:hover{
+  color:black;
 }
 
 .todo-list{
-  background-color: black;
-  width: 50%;
-  margin-left:23.5%;
-  text-align: center;
+  width: 70%;
+margin-left: 15%;
 }
 .todos{
-  background-color:black;
   display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
   
-
+  
 }
 .todo{
-  margin-top: 3px;
-  width:80%;
-  background-color: whitesmoke;
-  min-height: 50px;
-  margin-right: 1px;
+  background-color: tan;
+  height:35px;
+  width:800px;
+  padding-left: 7px;
+  font-size: 23px;
   text-align: start;
-  word-wrap: break-word;
-  
- 
 }
 .btns{
-  margin-top:3px;
-  display:flex;
-  flex-wrap: nowrap;
-  width:100px;
+  height:35px;
+  width:150px;
+  display: flex;
+  justify-content: space-between;
 }
-.com-btn{
-  height:50px;
-  color:green;
-  background-color: black;
-  width:33%;
-}
-.com-btn:hover{
-  background-color:green;
-  color: black; 
-}
-.del-btn{
-  height:50px;
-  color:red;
-  background-color: black;
-  width:33%;
-}
-.del-btn:hover{
-  background-color:red;
-  color: black; 
-}
-.edt-btn{
-  height:50px;
-  color:white;
-  background-color: black;
-  width:33%;
-}
-.edt-btn:hover{
-  background-color:white;
-  color: black; 
-}
-
-
-button :hover{
-  font-size: 150%;
-}
-
-.input-edit{
-  background-color: grey;
-  width:80.5%;
-  margin-right: 10px;
-  margin-left: 0;
-}
-
-.sav-btn{
+.btns button{
+  height:35px;
+  border:solid grey 0.1px;
+  width:50px;
  
-  color: green;
-}
-.sav-btn:hover{
-  background-color: rgb(49, 199, 49);
-  color:black
- 
-}
-.can-btn{
- 
-  color: red;
-}
-.can-btn:hover{
-  background-color:red;
-  color:black
-}
-.filter-btn{
-  width: 47.2%;
-  margin-left:26.5%; 
-}
-.not-yet-btn{
-  width: 50%;
-  background-color: blue;
-  margin-top: 0%;
-  font-size: 20px;
 
-  color:white;
 }
-.done-btn{
-  width: 50%;
-  background-color: blue;
-  margin-top: 0%;
+.btns button .fas{
+  font-size: 17px;
+  color:tan;
   
-  color:white;
-  font-size: 20px;
 }
-.not-yet-btn:hover{
-  background-color: red;
+.btns button .fas:hover{
+  font-size: 23px;
 }
-.done-btn:hover{
-  background-color: green;
+.btns button .far{
+  font-size: 17px;
+  color:tan
 }
-body{
-  background-color: black;
+.btns button .far:hover{
+  font-size: 23px;
 }
+.edit{
+  width:800px;
+  display: flex;
+  justify-content: space-between;
+}
+.input-edit{
+  width:650px;
+  height:30px
+}
+.edit button{
+color:tan;
+width:80px;
+background-color: white;
+font-size: 15px;
+}
+.edit button:hover{
+color:black;
+width:80px;
+background-color: white;
+font-size: 20px;
+}
+
+

@@ -1,4 +1,4 @@
-import {ADD,DELET,EDIT,FILTER} from './constantes'
+import {ADD,DELET,EDIT,FILTER,FILTREDTODOS} from './constantes'
 
 export const add =(newTodo)=>{
     return {
@@ -18,35 +18,55 @@ export const edit =(ID,textEdited)=>{
         payload:{ID,textEdited}
     }
 }
-export const filterClick =()=>{
+ 
+export const filter =(status)=>{
     return {
-        type:'FILTERClICK'
-       
-    }
-}
-export const filterNotDoneClick =()=>{
-    return {
-        type:'FILTERNOTDONECLICK'
-       
-    }
-}
-export const notDone =()=>{
-    return {
-        type:'NOTDONE'
-       
-    }
-}
-export const done =()=>{
-    return {
-        type:'DONE'
-       
+        type:"FILTER",
+        payload:{status}
+
     }
 }
 
-export const complet =(ID)=>{
-    return {
-        type:'COMPLET',
-        payload:ID
+export const filterHandler =()=>{
+          return {
+              type:'FILTREDTODOS'
+           
+          }
+      }
+      export const complet =(ID)=>{
+        return {
+            type:'COMPLET',
+            payload:ID
+          
+        }
+    
+//  export const filterClick =()=>{
+//      return {
+//          type:'FILTERClICK'
        
-    }
-}
+//      }
+//  }
+//  export const filterNotDoneClick =()=>{
+//      return {
+//          type:'FILTERNOTDONECLICK'
+       
+//      }
+//  }
+//  export const notDone =()=>{
+//      return {
+//          type:'NOTDONE'
+       
+//      }
+//  }
+//  export const done =()=>{
+//      return {
+//          type:'DONE'
+       
+//      }
+//  }
+
+ 
+
+
+ }
+

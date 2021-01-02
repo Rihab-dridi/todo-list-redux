@@ -1,18 +1,14 @@
 import React,{useState} from 'react';
-import { useSelector,useDispatch } from 'react-redux'
-import {add} from '../redux/actions/action'
+import {useDispatch } from 'react-redux'
+import {add,filter} from '../redux/actions/action'
 
 
 const Form=()=>{
-      //get the input (the text)
+      //get the input (the text) local state
       const[text,setText]=useState("")
       const textHandler=(e)=>{
           setText(e.target.value)  
       }
-
-      //get the state from the store 
-      const todos = useSelector(state => state.todos)
-      //get the dispathch function
       const dispatch = useDispatch()
 
     
@@ -22,10 +18,15 @@ const Form=()=>{
           setText("")
     }
 
+    const statusHandler=(e)=>{
+        dispatch (filter(e.target.value)) //for the select input 
+    }
+
     
     return (
            <div className="myForm">
-               <input className="form-input"
+              <div className="Add-form">
+              <input className="form-input"
                      type="text"
                      value={text}
                      onChange={textHandler}               //The onchange attribute fires the moment when the value of the element is changed.
@@ -34,6 +35,15 @@ const Form=()=>{
                      required
                />
                <button className="Add-btn" onClick={Add}><i className="fas fa-plus-square"></i></button>
+              </div>
+              <div className="filter-form">
+              <select onChange={statusHandler} name="todos" className="select" >
+                  <option value="All">All</option>
+                  <option value="Done">Done</option>
+                  <option value="toBeDone">To be done</option>
+  
+               </select>
+              </div>
               
            </div>
    
